@@ -15,10 +15,10 @@ jobs:
       - name: 🌈 Deploy with ssh...
         uses: cross-the-world/ssh-pipeline@master
         with:
-          host: ${{ secrets.DC_HOST }}
-          user: ${{ secrets.DC_USER }}
-          pass: ${{ secrets.DC_PASS }}
-          port: ${{ secrets.DC_PORT }}
+          host: ${{ secrets.HOST }}
+          user: ${{ secrets.USER }}
+          pass: ${{ secrets.PASS }}
+          port: 22
           connect_timeout: 10s
           script: |
             cd /home
